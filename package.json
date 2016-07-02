@@ -1,6 +1,6 @@
 {
   "name": "cmd-run",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "run cmd as a shortcut",
   "main": "index.js",
   "bin": {
