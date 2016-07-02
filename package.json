@@ -1,0 +1,29 @@
+{
+  "name": "cmd-run",
+  "version": "1.0.0",
+  "description": "run cmd as a shortcut",
+  "main": "index.js",
+  "bin": {
+    "cmd-run": "bin/cmd-run.js"
+  },
+  "scripts": {
+    "clone": "git clone https://github.com/luozt/cmd-run.git",
+    "http-server": "http-server -a 127.0.0.1 -p 8001",
+    "test": "node bin/cmd-run.js clone"
+  },
+  "keywords": [
+    "cmd",
+    "run",
+    "npm"
+  ],
+  "author": "LUOZHITAO",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luozt/cmd-run.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "minimist": "^1.2.0"
+  }
+}
