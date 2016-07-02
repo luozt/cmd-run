@@ -22,8 +22,8 @@
     "type": "git",
     "url": "https://github.com/luozt/cmd-run.git"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "minimist": "^1.2.0"
-  }
+  },
+  "devDependencies": {}
 }
