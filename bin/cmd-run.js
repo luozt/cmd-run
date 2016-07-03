@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 var http = require("http");
+var path = require("path");
 var argv = require("minimist")(process.argv.slice(2));
 
-var config = require('../package.json').scripts;
+var config = require(path.join(__dirname, '../package.json')).scripts;
 
 var arrCmd = argv['_'] || [];
 var cmd;
@@ -17,7 +18,7 @@ arrCmd.forEach(function(cmdKey){
 
     console.log("cmd get [ " + cmd + " ]");
 
-    var child = exec('npm run ' + cmdKey, function(err, stdout, stderr){
+    var child = exec(cmd, function(err, stdout, stderr){
       if(err){
         console.log("cmd [ "+ cmd +" ] err: " + err);
         return;
