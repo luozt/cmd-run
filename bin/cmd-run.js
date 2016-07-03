@@ -30,6 +30,7 @@ arrCmd.forEach(function(cmdKey){
 
     switch(cmdKey){
       case 'http-server':
+      case 'hs':
         openUrl('http://127.0.0.1:8001/', 8001);
         break;
     }
