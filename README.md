@@ -4,6 +4,10 @@
 
 Run some common commands as a short cut here using `cmd-run` npm module to save developing steps and time.
 
+## installation
+
+It needs to be installed globally: `npm i cmd-run -g`
+
 ## usage
 
 use command: `cmd-run <command>`
