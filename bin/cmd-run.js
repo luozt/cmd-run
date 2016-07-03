@@ -4,7 +4,7 @@ var http = require("http");
 var path = require("path");
 var argv = require("minimist")(process.argv.slice(2));
 
-var config = require(path.join(__dirname, '../package.json')).scripts;
+var config = require(path.join(__dirname, '../config.json'));
 
 var arrCmd = argv['_'] || [];
 var cmd;

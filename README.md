@@ -14,6 +14,8 @@ I put it in `cmd-run` command list and this list will grow gradually.
 
 `<commnad>` list:
 
-* http-server: `http-server -a 127.0.0.1 -p 8001`
+* `http-server`: http-server -a 127.0.0.1 -p 8001
+* `hs`: http-server -p 8001
+* `gf-push`: git push origin HEAD:refs/heads/master
 
 
