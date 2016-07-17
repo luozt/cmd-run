@@ -18,15 +18,28 @@ arrCmd.forEach(function(cmdKey){
 
     console.log("cmd get [ " + cmd + " ]");
 
-    var child = exec(cmd, function(err, stdout, stderr){
-      if(err){
-        console.log("cmd [ "+ cmd +" ] err: " + err);
-        return;
+    // 以@:开头的都是使用node执行的文件，不是直接执行的命令
+    // @:<fileRelative>
+    if('@:' !== cmd.slice(0,2)){
+      var child = exec(cmd, function(err, stdout, stderr){
+        if(err){
+          return console.log("cmd [ "+ cmd +" ] err: " + err);
+        }
+
+        console.log("cmd [ " + cmd + " ] success");
+      });
+    }else{
+      var fileRelative = cmd.slice(2),
+        fileAbsolute = path.join(__dirname, fileRelative);
+
+      var script = require(fileAbsolute);
+
+      try{
+        script();
+      }catch(err){
+        return console.log("cmd [ "+ cmd +" ] err: " + err);
       }
-
-      console.log("cmd [ " + cmd + " ] success");
-    });
-
+    }
 
     switch(cmdKey){
       case 'http-server':

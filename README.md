@@ -21,5 +21,6 @@ I put it in `cmd-run` command list and this list will grow gradually.
 * `http-server`: http-server -a 127.0.0.1 -p 8001
 * `hs`: http-server -p 8001
 * `gf-push`: git push origin HEAD:refs/heads/master
+* `clear.npm`: help you remove and clear the current working path's `node_modules` dir
 
 
