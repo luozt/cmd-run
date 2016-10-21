@@ -3,5 +3,8 @@
   "http-server": "http-server -a 127.0.0.1 -p 8001",
   "hs": "http-server -p 8001",
   "gf-push": "git push origin HEAD:refs/heads/master",
+  "gf-push.test": "git push origin HEAD:refs/heads/test",
+  "gf-push.release": "git push origin HEAD:refs/heads/release",
+  "gf-push.hotfix": "git push origin HEAD:refs/heads/hotfix",
   "clear.npm": "@:../scripts/clear_npm.js"
 }
